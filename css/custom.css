@@ -277,8 +277,8 @@ ul {
   align-items: center;
 }
 .logo-grid img {
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 150px;
+  max-height: 150px;
   object-fit: contain;
   opacity: 0.8;
   transition: opacity 0.2s ease;
