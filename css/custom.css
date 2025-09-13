@@ -278,9 +278,8 @@ ul {
 }
 .logo-grid img {
   max-width: 120px;
-  max-height: 60px;
+  max-height: 120px;
   object-fit: contain;
-  filter: grayscale(100%);
   opacity: 0.8;
   transition: opacity 0.2s ease;
 }
