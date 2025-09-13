@@ -1,0 +1,408 @@
+/*
+ * Custom styles for Enactus UNBF website
+ *
+ * This stylesheet implements a responsive layout without external frameworks.
+ * Colours approximate the University of New Brunswick palette (red and black).
+ */
+
+/* CSS reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  color: #212529;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Colour variables */
+:root {
+  --unb-red: #c8102e;
+  --unb-dark: #0a0a0a;
+  --unb-light: #f8f9fa;
+}
+
+/* Container utility */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--unb-dark);
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+.brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-menu li a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+  color: var(--unb-red);
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--unb-dark);
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .nav-menu.open {
+    max-height: 300px; /* adjust as needed */
+  }
+  .nav-menu li {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .nav-menu li a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Hero section */
+.hero-section {
+  background-color: var(--unb-red);
+  color: #fff;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-align: center;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.primary-btn {
+  background-color: var(--unb-red);
+  color: #fff;
+  border-color: var(--unb-red);
+}
+.primary-btn:hover,
+.primary-btn:focus {
+  background-color: #a10e24;
+  border-color: #a10e24;
+}
+.outline-btn {
+  background-color: transparent;
+  color: var(--unb-red);
+  border-color: var(--unb-red);
+}
+.outline-btn:hover,
+.outline-btn:focus {
+  background-color: var(--unb-red);
+  color: #fff;
+}
+
+/* Section styles */
+.section {
+  padding: 4rem 0;
+}
+.section h2 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+}
+.intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: #666;
+}
+
+/* About section */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.about-text h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--unb-red);
+}
+
+/* Cards grid (default) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+.card-content p {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+.card-content.text-center {
+  text-align: center;
+}
+
+/* ===== Team section: horizontal scroll row override ===== */
+.team-section .cards-grid.team-grid {
+  display: flex;                  /* override grid */
+  flex-wrap: nowrap;              /* single row */
+  gap: 1rem;
+  overflow-x: auto;               /* horizontal scrolling */
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;  /* optional snap */
+  padding-bottom: .5rem;          /* room for scrollbar */
+}
+.team-section .cards-grid.team-grid .card {
+  flex: 0 0 260px;                /* fixed card width */
+  scroll-snap-align: start;
+}
+.team-section .cards-grid.team-grid .card img {
+  height: 180px;                  /* consistent image height */
+  object-fit: cover;
+}
+/* Optional: nicer scrollbar */
+.team-section .cards-grid.team-grid::-webkit-scrollbar { height: 8px; }
+.team-section .cards-grid.team-grid::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: rgba(0,0,0,.2);
+}
+
+/* Sponsors logo grid */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+.logo-grid img {
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+.logo-grid img:hover {
+  opacity: 1;
+}
+
+/* Contact form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--unb-red);
+}
+
+/* Footer */
+.footer {
+  background: var(--unb-dark);
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+.footer a {
+  color: var(--unb-red);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.footer a:hover,
+.footer a:focus {
+  text-decoration: underline;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.modal.show {
+  display: flex;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.modal-body {
+  padding: 1rem;
+}
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--unb-red);
+}
+.modal-close:hover,
+.modal-close:focus {
+  color: #a10e24;
+}
+
+/* Hero-specific button styling
+   The call-to-action in the hero section uses the primary-btn class, but on a red
+   background the default styling blends in. Override it here to increase
+   contrast: give the button a light background with red text. */
+.hero-section .primary-btn {
+  background-color: var(--unb-light);
+  color: var(--unb-red);
+  border-color: var(--unb-light);
+}
+.hero-section .primary-btn:hover,
+.hero-section .primary-btn:focus {
+  background-color: #e9ecef;
+  color: var(--unb-red);
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+/* Accessibility focus outlines */
+a:focus,
+button:focus {
+  outline: 3px dashed var(--unb-red);
+  outline-offset: 2px;
+}
