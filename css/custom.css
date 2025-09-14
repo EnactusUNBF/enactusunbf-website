@@ -391,11 +391,11 @@ ul {
   font-size: 1.5rem;
   line-height: 1;
   cursor: pointer;
-  color: var(--unb-red);
+  color: #070d0d;
 }
 .modal-close:hover,
 .modal-close:focus {
-  color: #a10e24;
+  color: #070d0d;
 }
 
 /* Hero-specific button styling
@@ -426,6 +426,6 @@ ul {
 /* Accessibility focus outlines */
 a:focus,
 button:focus {
-  outline: 3px dashed var(--unb-red);
+  outline: 3px dashed #070d0d;
   outline-offset: 2px;
 }
