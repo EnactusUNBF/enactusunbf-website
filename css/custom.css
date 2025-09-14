@@ -12,6 +12,22 @@
   padding: 0;
 }
 
+p {
+  color: #070d0d;
+}
+
+h1 {
+  color: #070d0d;
+}
+
+h2 {
+  color: #070d0d;
+}
+
+h3 {
+  color: #070d0d;
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -32,8 +48,8 @@ ul {
 /* Colour variables */
 :root {
   --unb-red: #c8102e;
-  --unb-dark: #0a0a0a;
-  --unb-light: #f8f9fa;
+  --unb-dark: #070d0d;
+  --unb-light: #f0eff0;
 }
 
 /* Container utility */
@@ -49,8 +65,8 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--unb-dark);
-  color: #fff;
+  background: #070d0d;
+  color: #f0efec;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -63,14 +79,14 @@ ul {
 .brand {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #fff;
+  color: #f0efec;
 }
 .nav-toggle {
   display: none;
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: #fff;
+  color: #f0efec;
   cursor: pointer;
 }
 .nav-menu {
@@ -78,14 +94,14 @@ ul {
   gap: 1.5rem;
 }
 .nav-menu li a {
-  color: #fff;
+  color: #f0efec;
   font-weight: 500;
   padding: 0.5rem 0;
   transition: color 0.2s ease;
 }
 .nav-menu li a:hover,
 .nav-menu li a:focus {
-  color: var(--unb-red);
+  color: #ffc222;
 }
 
 /* Mobile navigation */
@@ -122,7 +138,7 @@ ul {
 /* Hero section */
 .hero-section {
   background-color: var(--unb-red);
-  color: #fff;
+  color: #f0efec;
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -151,24 +167,24 @@ ul {
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .primary-btn {
-  background-color: var(--unb-red);
-  color: #fff;
-  border-color: var(--unb-red);
+  background-color: #070d0d;
+  color: #ffc222;
+  border-color: #070d0d;
 }
 .primary-btn:hover,
 .primary-btn:focus {
-  background-color: #a10e24;
-  border-color: #a10e24;
+  background-color: #070d0d;
+  border-color: #070d0d;
 }
 .outline-btn {
   background-color: transparent;
-  color: var(--unb-red);
-  border-color: var(--unb-red);
+  color: #070d0d;
+  border-color: #070d0d;
 }
 .outline-btn:hover,
 .outline-btn:focus {
-  background-color: var(--unb-red);
-  color: #fff;
+  background-color: #070d0d;
+  color: #ffc222;
 }
 
 /* Section styles */
@@ -202,7 +218,6 @@ ul {
 .about-text h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: var(--unb-red);
 }
 
 /* Cards grid (default) */
@@ -212,7 +227,7 @@ ul {
   gap: 1.5rem;
 }
 .card {
-  background: #fff;
+  background: #f0efec;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -297,6 +312,7 @@ ul {
 .form-group {
   display: flex;
   flex-direction: column;
+  padding-bottom: 15px;
 }
 .form-group label {
   margin-bottom: 0.25rem;
@@ -316,13 +332,16 @@ ul {
 
 /* Footer */
 .footer {
-  background: var(--unb-dark);
-  color: #fff;
+  background: #070d0d;
+  color: #f0efec;
   padding: 2rem 0;
   text-align: center;
 }
+.footer p {
+  color: #f0efec;
+}
 .footer a {
-  color: var(--unb-red);
+  color: #ffc222;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -348,7 +367,7 @@ ul {
   display: flex;
 }
 .modal-content {
-  background: #fff;
+  background: #f0efec;
   border-radius: 8px;
   max-width: 600px;
   width: 100%;
@@ -384,14 +403,19 @@ ul {
    background the default styling blends in. Override it here to increase
    contrast: give the button a light background with red text. */
 .hero-section .primary-btn {
-  background-color: var(--unb-light);
-  color: var(--unb-red);
-  border-color: var(--unb-light);
+  background-color: #070d0d;
+  color: #ffc222;
+  border-color: #070d0d;
 }
 .hero-section .primary-btn:hover,
 .hero-section .primary-btn:focus {
-  background-color: #e9ecef;
-  color: var(--unb-red);
+  background-color: #ffc222;
+  color: #070d0d;
+}
+
+.hero-section {
+  background-color: #ffc222;
+  color: #070d0d;
 }
 
 /* Utilities */
