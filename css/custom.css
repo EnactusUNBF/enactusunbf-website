@@ -79,8 +79,8 @@ ul {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .navbar img {
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 110px;
+  max-height: 110px;
 }
 .navbar .container {
   display: flex;
@@ -130,7 +130,7 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     max-height: 0;
-    overflow: hidden;
+    overflow: scroll;
     transition: max-height 0.3s ease;
   }
   .nav-menu.open {
@@ -201,7 +201,7 @@ ul {
 
 /* Section styles */
 .section {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 .section h2 {
   text-align: center;
