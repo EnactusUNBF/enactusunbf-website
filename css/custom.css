@@ -78,6 +78,10 @@ ul {
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+.navbar img {
+  max-width: 120px;
+  max-height: 120px;
+}
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -436,9 +440,4 @@ a:focus,
 button:focus {
   outline: 3px dashed #070d0d;
   outline-offset: 2px;
-}
-
-.imageLogo {
-  max-width: 120px;
-  max-height: 120px;
 }
