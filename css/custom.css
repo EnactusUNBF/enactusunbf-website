@@ -179,14 +179,15 @@ ul {
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .primary-btn {
-  background-color: #070d0d;
-  color: #ffc222;
+  background-color: transparent;
+  color: #070d0d;
   border-color: #070d0d;
 }
 .primary-btn:hover,
 .primary-btn:focus {
   background-color: #070d0d;
   border-color: #070d0d;
+  color: #ffc222;
 }
 .outline-btn {
   background-color: transparent;
@@ -342,7 +343,7 @@ ul {
 }
 .form-group input:focus,
 .form-group textarea:focus {
-  outline: 2px solid var(--unb-red);
+  outline: 2px solid #070d0d;
 }
 
 /* Footer */
